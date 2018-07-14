@@ -1,0 +1,8 @@
+包管理器npm ，//Node.js Package Manager的意思
+框架express是node.js应用最广泛的web框架
+端口的作用：通过端口来区分出同一电脑内不同应用
+或者进程，从而实现一条物理网线
+(通过分组交换技术-比如internet)同时链接多个程序
+==绝对相等只判断值
+===判断值和类型是否相等
+package.json文件定义了项目的

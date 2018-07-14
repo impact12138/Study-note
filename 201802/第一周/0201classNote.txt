@@ -1,0 +1,5 @@
+break终止循环
+continue终止本次循环，跳过
+//
+arr.slice(start,end)
+arr.push();

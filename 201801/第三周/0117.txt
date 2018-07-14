@@ -1,0 +1,17 @@
+Node.js回调函数
+阻塞与非阻塞代码
+使用fs.readFileSync('ss')直接读取并得出结果的代码
+
+var fs = require("fs");
+fs.readFile('input.txt', function (err, data) {
+    if (err) return console.error(err);
+    console.log(data.toString());
+});
+console.log("程序执行结束!");
+读取的同时执行接下来的函数，则称为非阻塞代码//异步
+
+Node.js事件循环
+node.js是单进程单线程应用程序
+node.js的每一个API都是异步的
+
+$("").find("").function();

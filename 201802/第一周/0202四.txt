@@ -1,0 +1,21 @@
+cookie和session
+服务器向客户端发送 cookie。
+通常使用 HTTP 协议规定的 set-cookie 头操作。
+规范规定 cookie 的格式为 name = value 格式，
+且必须包含这部分,浏览器将 cookie 保存。
+每次请求浏览器都会将 cookie 发向服务器
+
+
+path：表示 cookie 影响到的路径，匹配该路径
+才发送这个 cookie;
+expires和maxAge告诉浏览器这个cookie什么时候过期;
+secure：当secure值为true时，cookie在HTTP中是
+无效，在HTTPS中才有效;
+httpOnly：浏览器不允许脚本操作document.cookie
+去更改cookie
+session:
+session中的数据是保留在服务器端的
+内存中存储数据；
+redis中存储session；
+session的store有四个常用选项:内存;cookie;缓存;数据库
+

@@ -1,0 +1,12 @@
+ECMA是js的一种规格，js是ECMA的一种实现
+ES6涵盖了ECMA2015、2016、2017；
+let声明，区别与var，只能在所处块级中有效
+适合for循环中使用
+需先声明后调用，否则报错，而先调用的var会得到undefined值
+let不允许重复声明
+ES6 允许块级作用域的任意嵌套。
+块级作用域中无名函数可以不声明function
+const声明一个只读的常量，一旦声明，常量的值不能改变
+const声明必须赋值且同样不可重复声明
+ES6的六种声明方法:var function let const import class;
+ES6声明多个变量可以写成数组形式分别对应；

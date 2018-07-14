@@ -1,0 +1,55 @@
+typeof返回值：function Object string Number undefined
+boolean
+其他判断类型方法：
+[] instanceof Array判断是否为数组
+
+Object.prototype.toString.call("1");
+返回"[Object String]"
+
+jQuery方法：$.type();
+
+DOM操作：
+查找节点：document.getElementById();
+	  document.getElementsByClassName();
+	  document.getElementsByTagName();
+	  document.body
+	  document.getElementsByName()；
+创建新的元素节点:document.createElement(元素名);
+创建新的属性节点:document.createAttribute(属性名);
+创建新的文本节点:document.createTextNode(文本内容);
+创建新的注释节点:document.createComment(注释节点);
+添加新节点：
+parent.appendChild(element/txt/comment/fragment);
+向父节点的最后一个子节点后追加新节点
+parent.insertBefore(newChild,existingChild);
+向父节点的某个特定子节点之前插入新节点
+element.setAttributeNode(attributeName);
+给元素增加属性节点
+element.setAttribute(attributeName,attributeValue);
+给元素增加指定属性，并设定属性值
+
+删除节点：
+parentNode.removeChild(existingChild);
+删除已有的子节点，返回值为删除节点
+element.removeAttribute(属性名);
+删除具有指定属性名称的节点，无返回值
+element.removeAttributeNode(attrNode);
+删除指定属性，返回值为删除的属性
+
+修改节点：
+parentNode.replaceChild(newChild,existingChild);
+用新节点替换父节点中已有的子节点
+element.setAttributeNode(attributeName);
+若原元素已有该节点，此操作能达到修改该属性值的目的
+element.setAttribute(attributeName,attributeValue);
+若原元素已有该节点，此操作能达到修改该属性值的目的
+
+
+
+
+
+
+
+
+
+

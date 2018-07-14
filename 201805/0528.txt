@@ -1,0 +1,18 @@
+对象Object的概念：
+var obj ={
+    sayHello: function(name){
+	console.log("hello" + name + "!");
+  }
+};
+或：
+var obj2={};
+obj2.sayHello=function(name){
+	console.log("hello" + name + "!");
+  };
+对象中可以放置对象、数组、方法等不同类型的属性
+可以通过迭代来获取其所有属性:
+for(var p in exampleObj){
+	console.log(exampleObj[p]);
+};
+//删除对象属性使用关键字delete
+对象可作为函数的参数

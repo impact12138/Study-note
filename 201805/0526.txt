@@ -1,0 +1,8 @@
+写于2018/05/26晚
+虚拟DOM无法直接操作，
+vue中的DOM操作须在全局对象
+Vue.nextTick中进行，代表DOM渲染后的操作
+不太适用于vue-cli脚手架开发？？
+dialog的关闭操作为@close事件
+不过仅需调整:visible.sync属性值的true/false
+即可完成

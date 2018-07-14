@@ -1,0 +1,15 @@
+console.log("hello world");输出
+创建第一个应用
+引入http模块
+var http = require("http");
+调用http自带的函数createServer，这个函数会返回一个对象
+这个对象有一个叫listen的方法，这个方法有一个数值参数，
+指定这个HTTP服务器监听的端口号。
+.listen(8888)；
+
+
+
+
+
+
+

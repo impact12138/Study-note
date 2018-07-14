@@ -1,0 +1,11 @@
+实现搜索框提示：
+html:一个input文本框，一个button
+     一个div用来显示提示内容
+     div放在input一起
+css:设置文本框div位置，绝对定位	 
+    
+javascript:设置div默认隐藏，设置点击input时div出现
+	   获取文本框keyword内容，将提示内容以数组
+	   的形式陈列出来
+	   如果文本框的字符与数组中的相匹配则打印在
+	   下面的div中

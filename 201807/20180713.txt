@@ -1,0 +1,8 @@
+webpack4.0移除了CommonChunkPlugin，改用webpack.optimize.SplitChunksPlugin
+或者：webpack.optimize.RuntimeChunkPlugin
+
+main bundle会随着自身的新增内容的修改，而发生变化；
+vendor bundle会随着自身的module.id的修改，而发生变化；
+manifest bundle会因为当前包含一个新模块的引用，而发生变化；
+
+PWA：渐进式网络应用程序(Progressive Web Application - PWA)

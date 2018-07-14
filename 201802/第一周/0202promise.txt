@@ -1,0 +1,4 @@
+promise概念:
+promise只有三种状态，未完成，完成(fulfilled)和失败(rejected)。
+promise的状态可以由未完成转换成完成，或者未完成转换成失败。
+promise的状态转换只发生一次

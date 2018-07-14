@@ -1,0 +1,5 @@
+document.getElementsByTagName("INPUT")[0].setAttribute
+("type","button");
+设置input的type属性，同样可以用于设置placeholder属性
+document.getElementById("sth").setAttribute("id","sth");
+设置或更改元素id

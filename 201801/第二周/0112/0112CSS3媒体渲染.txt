@@ -1,0 +1,14 @@
+CSS3  Media Queries
+<link rel="stylesheet" type="text/css" href="small.css" media="screen
+and (max-width:600px)" />
+//表示当屏幕宽度小于等于600时，使用small.css来渲染页面
+<link rel="stylesheet" media="screen and (min-width:900px)" 
+href="big.css" type="text/css" />
+//表示当屏幕宽度大于等于900时，使用big.css来渲染页面
+可使用多个Media Queries:
+media="screen and(min-width:600px)and(max-width:900px)"
+上面表示的是600px-900px间采用sth.css来渲染页面；
+设置屏幕的输出宽度Device Width
+media="screen and (max-device-width:480px)"
+指适用的最大设备宽度为480px;
+Media Queries能在不同的条件下使用不同的样式，使用页面达到不同的渲染效果；

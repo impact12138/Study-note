@@ -1,0 +1,2 @@
+addListener(event,listener)
+为指定事件添加一个监听器到监听器数组的尾部。

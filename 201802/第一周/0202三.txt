@@ -1,0 +1,18 @@
+线上部署: heroku
+app.js启动，
+app.listen(process.env.PORT || 5000);导流量和启动;
+从一个构造函数中继承原型方法到另一个。constructor
+的原型会被设置到一个从superConstructor创建的
+新对象上。
+
+mongodb与mongoose的使用
+mongodb:开源、文档型、nosql
+mongodb 是个存 bson 数据的数据库，或是存
+哈希数据的数据库
+设计博客程序的数据库可以设计成:
+var Post = mongoose.model('Post', {
+  title: String,
+  content: String,
+  author: String,
+  create_at: Date,
+});

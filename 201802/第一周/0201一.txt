@@ -1,0 +1,5 @@
+实现网络爬虫：
+三个依赖:express,superagent,cheerio
+superagent是http的一个库，可以发起get或post请求
+cheerio相当于nodejs版的jquery，用来从网页以css
+选择器抓取数据

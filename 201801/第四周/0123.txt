@@ -1,0 +1,14 @@
+JS制作抽奖
+tips：
+start.onclick=startFun;//这个函数后面加括号，就直接调用了该函数，所以不加
+
+步骤:
+//定义数据成数组储存在变量中
+//window.onload = function()
+  获取两个按钮作用的id
+  绑定函数//不调用
+  绑定键盘事件
+  定义函数
+
+tips：
+showOption[i].replace(txtValue,"<a style='color:red'>"+txtValue+"</a>"

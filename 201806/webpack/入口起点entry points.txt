@@ -1,0 +1,43 @@
+单个入口(简写)语法:
+const config = {
+  entry: './path/to/my/entry/file.js'
+ };
+module.exports =config;
+是下面的简写：
+const config = {
+  entry: {
+    main: './path/to/my/entry/file.js'
+   }
+  };
+
+对象语法：
+const config = {
+   entry: {
+     app: './src/app.js',
+     vendors: './src/vendors.js'
+   }
+  };
+
+常见场景：
+分离 应用程序[app]和 第三方库[vendor]入口
+const config = {
+  entry:{
+    app: './src/app.js',
+    vendors: './src/vendors.js'
+   }
+ };
+
+多页面应用程序
+const config = {
+   entry:{
+     pageOne: './src/pageOne/index.js',
+     pageTwo: './src/pageTwo/index.js',
+     pageThree: './src/pageThree/index.js'
+   }
+ };
+
+
+
+
+
+

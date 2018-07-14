@@ -1,0 +1,28 @@
+npm的使用：
+npm install express -g全局安装express
+npm list express查看某个模块的版本号
+
+使用package.json
+name - 包名;
+version - 包的版本号;
+description - 包的描述;
+
+卸载模块
+npm uninstall express
+更新模块
+npm update express
+搜索模块
+npm search express
+
+创建模块
+先使用npm init生成package.json文件
+填写文件名，描述最后输入yes确认
+npm adduser 可以在npm资源库中注册用户
+npm publish来发布模块
+
+NPM常用命令
+npm help查看所有命令
+npm help install查看具体某条命令的详细帮助
+npm cache clear 用于清空NPM本地缓存，用于对付使用相同版本号发布
+新版本代码的人。
+npm unpublish <package>@<version>撤销自己发布过的某个版本的代码

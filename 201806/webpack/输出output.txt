@@ -1,0 +1,35 @@
+用法[Usage]
+在webpack中配置output属性的最低要求是：将它的
+值设置为一个对象,包括一下两点:
+1、filename用于输出文件的文件名
+2、目标输出目录path的绝对路径
+const config = {
+  output: {
+    filename: 'bundle.js',
+    path: '/home/proj/public/assets'
+   }
+ };
+ module.exports = config;
+
+多个入口起点：
+{
+  entry: {
+    app: './src/app.js',
+    search: './src/search.js'
+   },
+  output:{
+    filename: '[name].js',
+    path:__dirname + '/dist'
+   }
+ }
+
+高级进阶：
+使用CDN和资源hash：
+output:{
+  path: "/home/proj/cdn/assets/[hash]",
+  publicPath: "http://cdn.example.com/assets/[path]/"
+}
+在编译时不知道最终输出文件的publicPath的情况下，
+publicPath可以留空，并且在入口起点文件运行时动态
+设置。
+__webpack_public_path__ = myRuntimePublicPath

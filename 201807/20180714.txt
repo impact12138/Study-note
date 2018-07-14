@@ -1,0 +1,106 @@
+对webpack的常用功能与插件的总结：
+npm init -y
+npm install --save-dev webpack webpack-cli
+基本文件：package.json、./src/index.js、webpack.config.js
+webpack.config.js:
+入口entry: 入口文件索引;
+分离入口：entry:{a: '',b: ''}
+
+输出output:filename输出文件名、path输出到文件夹名
+动态生成filename '[name].bundle.js'
+filename: '[name].[chunkhash].js'
+publicPath: '/'作用于服务器脚本，确保资源在别的端口号下可以访问
+
+devtool: 'inline-source-map',使用source-map追踪错误和警告(开发环境)
+	 'source-map' (生产环境)
+
+devServer:{
+	contentBase: './dist'声明将dist目录下的文件作为可访问文件
+			并在localhost:8080下建立服务
+	hot: true 启用HMR
+},
+
+配置module.rules:[
+	{
+		test:/\.css$/,
+		use:[
+			'style-loader',
+			'css-loader'
+		]css文件
+	},
+	{
+		test:/\.(png|svg|jpg|gif)$/,
+		use:[
+			'file-loader'
+		]图片文件
+	},
+	{
+		test:/\.(woff|woff2|eot|ttf|otf)$/,
+		use:[
+			'file-loader'
+		]字体文件
+	},
+	{
+		test:/\.xml$/,
+		use:[
+			'xml-loader'
+		]数据文件
+	},
+	{
+		test:/\.(csv|tsv)$/,
+		use:[
+			'csv-loader'
+		]数据文件
+	}
+]
+
+插件plugins: [
+	new CleanWebpackPlugin(['dist']),
+	new HtmlWebpackPlugin({
+		title: 'Output something'
+	}),
+	new webpack.NamedModulesPlugin(),
+	new webpack.HotModuleReplacementPlugin(),
+	new UglifyJSPlugin({
+		sourceMap: true 启用
+	}),
+	new webpack.DefinePlugin({
+	'process.env.NODE_ENV': JSON.stringify('production')
+		//指定环境
+	}),
+	new webpack.optimize.RuntimeChunkPlugin({4.0+版本
+		name: 'common' //指定公共bundle的名称
+	}),
+	new webpack.optimize.CommonsChunkPlugin({
+		name: 'manifest'/'vendor'
+	}),
+	mew webpack.HashedModuleIdsPlugin()修复hashID意外变更
+]
+
+mode: "production"通过mode选项切换到压缩输出
+
+
+package.json:
+"build":"webpack"设置npm脚本快速构建(npm run build),
+"start":"webpack-dev-server --open"设置直接运行服务器(npm start),
+"server":"node server.js"方便运行服务,
+"sideEffects": false  或
+"sideEffects": [
+	"  " 副作用文件索引数组
+	"*.css"
+]
+
+
+设置server.js ，使用webpackDevMiddleware设置publicPath，新端口号
+
+tree shaking: 描述移除js上下文中的未引用代码(dead-code)
+
+建议为每个环境写彼此独立的webpack配置
+webpack.common.js/webpack.dev.js/webpack.prod.js
+再在package.json中配置新的npm script:
+"start": "webpack-dev-server --open --config webpack.dev.js",
+"build": "webpack --config webpack.prod.js"
+
+main bundle会随着自身的新增内容的修改，而发生变化；
+vendor bundle会随着自身的module.id的修改，而发生变化；
+manifest bundle会因为当前包含一个新模块的引用，而发生变化；

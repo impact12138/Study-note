@@ -1,0 +1,13 @@
+用Node.JS+MongoDB搭建个人博客:
+技术需求:
+后台:Node.js(express);
+数据库:Mongodb;
+前端库:jQuery;
+前端框架:Bootstrap;
+实现功能:
+写博客；
+博客文章分类；
+留言板；
+浏览，点赞；
+获取访问者当前位置。
+第一章

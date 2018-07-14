@@ -1,0 +1,89 @@
+loader用于对模块的源代码进行转换。loader可以是你在
+import或加载模块时 预处理文件 。因此，loader类似于其他
+构建工具中“任务（task）”，并提供了处理前端构建步骤的
+强大方法。loader可以将文件从不同的语言(如TypeScript)转
+换为JavaScript，或将内联图像转换为data URL.loader甚至
+允许直接在javaScript模块中import CSS文件。
+
+示例
+npm install --save-dev css-loader
+npm install --save-dev ts-loader
+module.exports = {
+  module: {
+    rules: [
+      { test: /\.css$/,use:'css-loader' }, 
+      { test: /\.ts$,use:'ts-loader' }
+     ]
+   }
+ };
+
+使用loader
+配置[Configuration]--在webpack.config.js中指定loader
+module:{
+  rules: [
+    {
+      test:/\.css$/,
+      use: [
+        { loader: 'style-loader' },
+        {
+          loader: 'css-loader',
+ 	  options: {
+		modules: true
+	     }
+	    }
+           ]
+	  }
+	 ]
+	}
+
+内联--在每个import语句中指定loader
+import Styles from 'style-loader!css-loader?modules!./style.css';
+
+CLI--通过CLI使用loader
+webpack --module-bind jade-loader --module-bind
+'css=style-loader!css-loader'
+
+loader特性：
+1、loader支持链式传递。能够对资源使用流水线(pipeline)。一组
+链式的loader将按照相反的顺序执行。loader链中的第一个
+loader返回值给下一个loader。在最后一个loader，返回webpack
+所预期的JavaScript。
+2、loader可以是同步的也可以是异步的。
+3、loader运行在Node.js中，并且能够执行任何可能的操作。
+4、loader接收查询参数。用于对loader传递配置。
+5、loader也能够使用options对象进行配置。
+6、除了使用package.json常见的main属性，还可以将普通的npm
+模块到处为loader，做法是在package.json里定义一个loader字段
+7、插件(plugin)可以为loader带来更多特性。
+8、loader能够产生额外的任意文件。
+
+解析loader
+loader遵循标准的模块解析。多数情况下，loader将从模块路径
+(通常将模块路径认为是npm install，node_modules)解析。
+
+loader模块需要导出为一个嗯函数，并且使用Node.js兼容的
+JavaScript编写。通常使用npm进行管理，但是也可以将自定义的
+loader作为应用程序中的文件。按照约定，loader通常被命名为
+xxx-loader (例如json-loader)。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+使用eventproxy控制并发
+学习node.js的callback hell
+学习eventproxy的控制并发
+作用：获取首页所有的链接并转换，获取title
+
+使用asynv控制并发
+ async 的 mapLimit(arr, limit, iterator, callback) 接口

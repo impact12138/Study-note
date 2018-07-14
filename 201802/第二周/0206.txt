@@ -1,0 +1,17 @@
+require 可加载 .js、.json 和 .node 后缀的文件
+require 目录的机制是:
+如果目录下有package.json并指定了main字段,则用之;
+如果不存在package.json,则依次尝试加载目录下的
+ index.js 和 index.node；
+require 过的文件会加载到缓存，所以多次require 
+同一个文件（模块）不会重复加载
+
+exports和module.exports用来导出代码
+
+HTTP状态码:
+100   continue
+200   OK
+204   No Content
+403   Forbidden
+404   NotFound
+500   Internal Server Error 

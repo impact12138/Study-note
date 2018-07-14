@@ -1,0 +1,10 @@
+模板引擎：
+(Template Engine)是一个将页面模板和要显示的数据结合
+起来生成HTML页面的工具。如若说express中的路由控制方
+法相当于MVC中的控制器的话，那模板引擎就相当于MVC中的
+视图。
+ejs是模板引擎的一种，使用简单且与express集成良好
+ejs只有以下三种标签：
+<% code %>：JavaScript 代码。
+<%= code %>：显示替换过 HTML 特殊字符的内容。
+<%- code %>：显示原始 HTML 内容。

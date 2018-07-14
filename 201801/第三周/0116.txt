@@ -1,0 +1,6 @@
+https://code.jquery.com/jquery-1.11.3.js
+引用jQuery，使用mouseenter()和mouseleave()分别引用
+ slideUp(),slideDown();
+mouseenter()定义鼠标穿过时的变化
+mouseleave()定义鼠标离开
+解决了同一个元素下，slideup()的循环

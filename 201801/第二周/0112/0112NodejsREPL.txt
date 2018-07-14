@@ -1,0 +1,22 @@
+Node.js REPL交互式解释器//表示一个电脑的环境，我们可以在终端中输入命令
+，并接收系统的相应。
+Node自带交互式解释器可执行读取/执行/打印/循环等任务。
+node+enter启动Node的终端
+//简单的四则运算
+
+使用变量
+可将数据存储在变量中 //类似js
+//Node REPL支持javascript格式的多行表达式
+可使用下划线_来获取上一个表达式的运算结果
+
+REPL命令
+ctrl+c 退出当前终端
+ctrl+c连按两次 退出Node REPL
+ctrl+d退出Node REPL
+向下向上键查看历史命令
+tab 键 - 列出当前命令
+.help - 列出使用命令
+.break - 退出多行表达式
+.clear - 退出多行表达式
+.save filename - 保存当前的 Node REPL 会话到指定文件
+.load filename - 载入当前 Node REPL 会话的文件内容。
