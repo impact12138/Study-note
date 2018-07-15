@@ -1,0 +1,30 @@
+webpack+vue单页应用：
+1、创建项目文件夹
+config、index.html、main.js
+
+2、配置webpack-base-config.js
+设置mode为development，output的filename和path
+
+3、在package中添加build--config指向
+webpack-base-config.js
+
+4、引入html-webpack-plugin插件
+
+5、配置webpack.dev.config.js：
+entry入口，output输出，dev-server构建本地node服务器：
+热部署hot，模板template，端口号port，允许的host/allowHosts,
+plugins插件：new HtmlWebpackPlugin
+
+6、package依赖中添加babel-loader、babel-core、babel-preset-env
+并添加"server"npm script，指向webpack.dev.config.js
+
+7、在webpack.dev.config.js中配置css、js、vue loader(注意先后顺序)
+vue-template-compiler、vue-style-loader
+
+8、在webpack.dev.config.js里添加VueLoaderPlugin、
+webpack.HotModuleReplacementPlugin插件
+
+8、建立src文件夹，新建app.vue，写好单页面。设置好main.js:
+引入vue，app.vue，挂载，使用<App/>模板，注册app组件
+
+npm run server/npm start
