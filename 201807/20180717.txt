@@ -1,0 +1,11 @@
+"lodash":
+是一套工具库，内部封装了很多对字符串、数组、对象等常见数据类型
+的处理函数。
+lodash通过降低array、number、objects、string等等的使用难度从而让
+JavaScript变得更简单，lodash的模块方法非常适用于： 
+ 遍历array、object和string；
+ 对值进行操作和检测；
+ 创建符合功能的函数；
+
+"Ramda":
+另一套工具库，理念是："function first,data last"

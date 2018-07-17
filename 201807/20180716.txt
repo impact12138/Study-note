@@ -1,0 +1,17 @@
+HtmlWebapckPlugin插件:
+minify:{
+    caseSensitive: false, //是否大小写敏感
+    removeComments: true, //去除注释
+    removeEmptyAttributes: true, //去除空属性
+    removeAttributeQuotes: true, //尽可能的去除属性引号
+    collapseWhitespace: true，  //是否去除空格
+    collapseBooleanAttributes: true //是否简写Boolean格式的属性如：
+			//disabled='disabled'简写为disabled
+}
+
+resolve配置模块该如何解析：
+extensions: [".js",".json",".vue"]，
+alias:{
+	xyz$: path.resolve(__dirname, 'path/to/file.js')
+	//使用相对路径
+}
