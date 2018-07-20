@@ -1,0 +1,17 @@
+"axios"：
+从浏览器中创建XMLHttpRequest；       
+从node.js发出http请求；
+支持Promise API；
+拦截请求和响应；
+转换请求和响应数据；
+取消请求；
+自动转换JSON数据；
+客户端支持防止CSRF/XSRF；
+"babel"：
+是一个编译器，它将代码分为三个阶段：解析、转换、生成
+"babel-core":所有的转译都将使用本地配置文件
+"babel-polyfill":它会仿效一个完整的es2015+环境，并意图运行
+于一个应用中而不是一个库/工具。polyfill会在babel-node时自动加载
+
+
+let声明的变量只在它所在的代码块有效，适合for循环中使用

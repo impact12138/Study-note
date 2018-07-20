@@ -1,0 +1,68 @@
+const VueLoaderPlugin = require(vue-loader/lib/plugin);
+
+mini-css-extract-plugin来提取css文件（4.0+版本）；
+
+webpack-dev-server:能够用于快速开发应用程序
+将dist/目录下的文件，作为可访问文件
+
+koa：
+koa的所有功能都是通过中间件来实现的，每个中间件接受两个参数，第一个是
+Context对象，第二个参数next函数，只要调用next函数，就可以把执行权交给
+下一个中间件
+
+async函数声明一个返回AsyncFunction对象的异步函数
+ctx.response.body = await fs.readFile('./..','utf-8')
+这里的fs.readFile()是一个异步操作
+
+koa-compose模块可以将多个中间件合成为一个。
+
+处理错误的中间件：try...catch，在最外层的中间件处理
+所有中间件的错误处理。
+如果错误被try...catch捕获，就不会触发error事件，这时，必须
+调用ctx.app.emit()，手动释放error事件，才能让监听函数生效
+
+ctx.cookies用来读写Cookie
+koa-body模块可以用来从post请求的数据体里面提取键值对；
+koa-body还可以用来处理文件上传；
+----------------------------------------------------------------------
+
+webpack loaders：
+webpack可以使用loader来预处理文件，这允许你打包除javascript之外的任何
+静态资源。通过node.js编写，通过require()语句中使用loadername!前缀来激活
+
+
+ES6：
+只要块级作用域中存在let命令，它所表明的变量就绑定这个区域不受外部影响
+es6中规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量从一开始便会形成封闭作用域。凡是在声明之前使用这些变量，便会报错
+在代码块中，在let声明前使用变量都会报错（暂时性死区），typeof也会保错，相反，如果一个变量没有声明，反而不会保错
+var x=x;//不报错    let x=x;//报错
+let 不允许在相同的作用域内重复声明一个变量；
+es6允许块级作用域的任意嵌套；
+
+const命令：声明一个只读的常量，一旦声明，常量的值就不能改变
+
+es6声明变量的六种方法：
+var、function、let、const、import和class
+es6中：
+var命令和function命令声明的全局变量依旧是顶层对象的属性；
+let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性；
+
+js中的问号
+(a==b)?a:b
+判断a是否等于b，如果是(true)那么返回a，如果否(false)返回b；
+
+typeof null = "Object";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
